@@ -27,7 +27,7 @@ Cộng trừ nhân chia. nhị phân
 - Kiểu dử liệu mảng 2 chiều
 
 ## Ngày 5: Ứng dụng game đơn giản
-- Dùng mảng vẽ tên mình lên Convas ( Javascript )
+- Dùng mảng vẽ tên mình lên Canvas ( Javascript )
 
 ## Ngày 6:
 
