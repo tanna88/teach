@@ -1,9 +1,6 @@
 # Lập Trình Căn Bản
 
-
-Cộng trừ nhân chia. nhị phân
-
-## Ngày 1:
+## Ngày 1: Cộng trừ nhân chia. nhị phân
 
 - Bit 0 - 1
 - Chuyển đổi Nhị Phân / Thập phân
