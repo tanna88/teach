@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tiện ích máy tính online</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="calculator">
+		<input type="text" class="box-calculation" value="">
+		<input type="text" class="box-result" value="">
+		<div class="box-button">
+			<button class="refresh">CE</button>
+			<button class="del">Del</button>
+			<button class="plus operation">+</button>
+			<button class="minus operation">-</button>
+			<button class="times operation">*</button>
+			<button class="divide operation">/</button>
+			<button class="number">9</button>
+			<button class="number">8</button>
+			<button class="number">7</button>
+			<button class="number">6</button>
+			<button class="number">5</button>
+			<button class="number">4</button>
+			<button class="number">3</button>
+			<button class="number">2</button>
+			<button class="number">1</button>
+			<button class="number">0</button>
+			<button class="dot">.</button>
+			<button class="equal">=</button>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+		// Thực hiện các hành động bên trong khi tài liệu html của trang web được load xong và cây DOM được tạo thành
+		$(document).ready(function() {
+			$('.box-calculation').attr('disabled', 'true'); // Vô hiệu hoá ô phép tính
+			$('.box-result').attr('disabled', 'true'); // Vô hiệu hoá ô kết quả
+			$('.box-button button.times').attr('disabled', 'true'); // Vô hiệu hoá nút nhân
+			$('.box-button button.divide').attr('disabled', 'true'); // Vô hiệu hoá nút chia
+			$('.box-button button.equal').attr('disabled', 'true'); // Vô hiệu hoá nút bằng
+		});
+
+		// Thực hiện các hành động bên trong khi click vào các nút số
+		$('.box-button button.number').on('click', function() {
+			$char = $(this).html(); // Lấy số vừa click
+			$value_calculation = $('.box-calculation').val(); // Lấy chuỗi giá trị trong ô phép tính
+			$('.box-calculation').val($value_calculation + $char); // Thêm số vừa click vào sau chuỗi giá trị trong ô phép tính
+			$('.box-button button.operation').removeAttr('disabled'); // Gỡ bỏ vô hiệu hoá các nút phép toán
+			$('.box-button button.equal').removeAttr('disabled'); // Gỡ bỏ vô hiệu hoá nút bằng
+		});
+
+		// Thực hiện các hành động bên trong khi click vào các nút dấu chấm
+		$('.box-button button.dot').on('click', function() {
+			$char = $(this).html(); // Lấy dấu chấm
+			$value_calculation = $('.box-calculation').val(); // Lấy chuỗi giá trị trong ô phép tính
+			$('.box-calculation').val($value_calculation + $char); // Thêm dấu chấm vào sau chuỗi giá trị trong ô phép tính
+			$('.box-button button.operation').attr('disabled', 'true'); // Vô hiệu hoá các nút phép toán
+			$(this).attr('disabled', 'true'); // Vô hiệu hoá nút dấu chấm
+		});
+
+		// Thực hiện các hành động bên trong khi click vào các nút CE
+		$('.box-button button.refresh').on('click', function() {
+			$('.box-calculation').val(''); // Làm trống ô phép tính
+			$('.box-result').val(''); // Làm trống ô kết quả
+		});
+
+		// Thực hiện các hành động bên trong khi click vào các nút Del
+		$('.box-button button.del').on('click', function() {
+			$string = $('.box-calculation').val(); // Lấy giá trị trong ô phép tính
+			$('.box-calculation').val($string.substring(0, $string.length - 1)); // Xoá ký tự cuối cùng chuỗi giá trị trong ô phép tính
+		});
+
+		// Thực hiện các hành động bên trong khi click vào các nút phép toán
+		$('.box-button button.operation').on('click', function() {
+			$char = $(this).html(); // Lấy dấu phép toán vừa click
+			$value_calculation = $('.box-calculation').val(); // Lấy chuỗi giá trị trong ô phép tính
+			$('.box-calculation').val($value_calculation + $char); // Thêm dấu phép toán vừa click vào sau chuỗi giá trị trong ô phép tính
+			$('.box-button button.times').attr('disabled', 'true'); // Vô hiệu hoá nút nhân
+			$('.box-button button.divide').attr('disabled', 'true'); // Vô hiệu hoá nút chia
+			$('.box-button button.dot').removeAttr('disabled'); // Gỡ bỏ vô hiệu hoá nút dấu chấm
+		});
+
+		// Thực hiện các hành động bên trong khi click vào các nút bằng
+		$('.box-button button.equal').on('click', function() {
+			$result = $('.box-calculation').val(); // Lấy chuỗi giá trị trong ô phép tính
+			$('.box-result').val(eval($result)); // Hiển thị kết quả trong ô kết quả
+		});
+	</script>
+</body>
+</html>
