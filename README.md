@@ -1,3 +1,8 @@
+# Tài liệu tham khảo
+https://cuuduongthancong.com/university/dhcntt/dh-cong-nghe-thong-tin/uit
+- Nhập môn lập trình
+- Cấu Trúc Dữ Liệu Và Giải Thuật
+
 # Lập Trình Căn Bản
 
 ## Ngày 1: Cộng trừ nhân chia. nhị phân
