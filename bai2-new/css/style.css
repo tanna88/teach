@@ -1,0 +1,30 @@
+button {
+  width: 20px;
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button.num {
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+div {
+  border: 1px solid black;
+  width: 350px;
+}
+
+input {
+  width: 280px;
+  height: 50px;
+}
