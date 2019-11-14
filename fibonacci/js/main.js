@@ -1,9 +1,10 @@
 var drawOnMe; // context
 var x = 100;
 var y = 100;
+
 var array = [];
 
-var n = 20;
+var n = 0;
 
 function run() {
   // khoi tao moi truong ve 2D
@@ -22,13 +23,23 @@ function redraw() {
 
   drawOnMe.fillStyle = 'rgba(200, 200, 0, 1)';
 
+  // Ve day so
   for ( var i = 0; i < array.length; i++) {
     drawOnMe.fillText(array[i],i * 20 + 10, 10);
   }
 }
 
 function increaseFibo() {
-  array.push("1")
+
+  if (n == 0) {
+    array.push(0)
+  } else if (n == 1) {
+    array.push(1)
+  } else if (n == 2) {
+    array.push(1)
+  }
+
+  n = n + 1;
   redraw();
 }
 
