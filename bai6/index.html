@@ -1,12 +1,19 @@
 <html>
   <head>
     <title>Bai5</title>
+    <script src="js/base-matrix-drawable.js"></script>
+    <script src="js/background.js"></script>
     <script src="js/base-brick.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
-    <input type="button" id="clickme" value="Run" onClick="run()" />
-    <div id="debug" style="width: 100px; height: 20px"></div>
+    <div>
+      <div id="debug" style="width: 200px; height: 60px; float: left;"></div>
+      <button onClick="toggleDebug()">Toggle debug</button>
+      </hr>
+    </div>
+    <div style="clear: both;"></div>
+
     <canvas id="mycanvas" width="800" height="800"></canvas>
   </body>
 </html>
