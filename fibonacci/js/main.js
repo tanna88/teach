@@ -35,8 +35,9 @@ function increaseFibo() {
     array.push(0)
   } else if (n == 1) {
     array.push(1)
-  } else if (n == 2) {
-    array.push(1)
+  } else {
+    var f = array[n - 1] + array[n - 2];
+    array.push(f)
   }
 
   n = n + 1;
@@ -50,3 +51,6 @@ function moveLeft() {
   redraw();
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  run();
+})

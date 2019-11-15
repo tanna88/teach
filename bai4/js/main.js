@@ -22,3 +22,7 @@ function moveLeft() {
   x = x - 20;
   redraw();
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  run();
+})
