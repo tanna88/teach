@@ -18,14 +18,11 @@ function redraw() {
   drawOnMe.fillStyle = 'rgba(0, 0, 200, 1)';
   drawOnMe.fillRect(0, 0, 400, 400);
 
-  drawOnMe.fillStyle = 'rgba(200, 0, 0, 1)';
-  drawOnMe.fillRect(x, y, 40, 70);
-
   drawOnMe.fillStyle = 'rgba(200, 200, 0, 1)';
 
   // Ve day so
   for ( var i = 0; i < array.length; i++) {
-    drawOnMe.fillText(array[i],i * 20 + 10, 10);
+    drawOnMe.fillText(array[i],i * 20 + 10, 50);
   }
 }
 
@@ -36,18 +33,10 @@ function increaseFibo() {
   } else if (n == 1) {
     array.push(1)
   } else {
-    var f = array[n - 1] + array[n - 2];
-    array.push(f)
+    // tim hieu ve mang de lam phan nay
   }
 
   n = n + 1;
-  redraw();
-}
-
-function moveLeft() {
-  if (x > 20)  {
-    x = x - 20;
-  }
   redraw();
 }
 
