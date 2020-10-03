@@ -10,18 +10,18 @@ https://cuuduongthancong.com/university/dhcntt/dh-cong-nghe-thong-tin/uit
 - Bit 0 - 1
 - Chuyển đổi Nhị Phân / Thập phân
 - Cộng Trừ Nhân Chia Nhị Phân
-- Kiểu dữ liệu Byte = 8 bit => 2^8 = 256 
+- Kiểu dữ liệu Byte = 8 bit => 2^8 = 256
 - Kiểu dử liệu Int = 2 hoặc 4 bytes
 - Kiểu dự liệu Char = 1 byte
 
 
-## Ngày 2: Lập trình đơn giản 
+## Ngày 2: Lập trình đơn giản
 
 
 ## Ngày 3:
 
 - Bộ nhớ kiểu dữ liệu
-- Bộ nhớ hàm 
+- Bộ nhớ hàm
 - Bộ nhớ con trỏ
 
 ## Ngày 4:
@@ -32,4 +32,4 @@ https://cuuduongthancong.com/university/dhcntt/dh-cong-nghe-thong-tin/uit
 - Dùng mảng vẽ tên mình lên Canvas ( Javascript )
 
 ## Ngày 6:
-
+- Test 1
