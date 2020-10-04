@@ -32,4 +32,4 @@ https://cuuduongthancong.com/university/dhcntt/dh-cong-nghe-thong-tin/uit
 - Dùng mảng vẽ tên mình lên Canvas ( Javascript )
 
 ## Ngày 6:
-- Test 1
+- Test 2
